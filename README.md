@@ -1,4 +1,4 @@
-The following does not work because of github's CORS restrictions.
+The following does not work because of github's CORS restrictions. Please go to https://github.com/tsalufe/real-editor/blob/master/real-editor.js and copy the code before dropping it directly on your browser.
 
 Add the following script tag to your html file,
 

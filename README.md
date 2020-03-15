@@ -7,5 +7,8 @@ Add the following script tag to your html file,
 Or, drop the following script to your browser console
 
 ```
-document.write("<script type='text/javascript' src='https://github.com/tsalufe/real-editor/real-editor.js'></script>");
+let script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://github.com/tsalufe/real-editor/real-editor.js';
+document.body.append(script);
 ```

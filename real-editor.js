@@ -15,15 +15,22 @@ class RealEditor {
         return this.xButton = xButton;
     }
     
-    init() {
-        let xButton = this.getXButton();
-        document.body.addEventListener('mouseover', function(event) {
+    onMouseOver(event) {
             if (event.target.id == 'real-editor-x-button') return;
             let pos = event.target.getBoundingClientRect();
-            xButton.style.top = pos.y + 'px';
-            xButton.style.left = pos.x + 'px';
-            xButton.target = event.target;
-        });
+            this.getXButton().style.top = pos.y + 'px';
+            this.getXButton().style.left = pos.x + 'px';
+            this.getXButton().target = event.target;
+    }
+    
+    init() {
+        let self = this;
+        document.body.addEventListener('mouseover', this.onMouseOver.bind(self));
+    }
+    
+    destroy() {
+        document.body.removeEventListener('mouseover', this.onMouseOver.bind(self));
+        this.getXButton().parentNode.removeChild(this.getXButton());
     }
 }
 

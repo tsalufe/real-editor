@@ -1,3 +1,5 @@
+The following does not work because of github's CORS restrictions.
+
 Add the following script tag to your html file,
 
 ```

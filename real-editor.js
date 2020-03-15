@@ -10,7 +10,14 @@ class RealEditor {
         xButton.style.cursor = 'pointer';
         document.body.append(xButton);
         xButton.addEventListener('click', function() {
+            let p = xButton.target.parentNode;
             xButton.target.parentNode.removeChild(xButton.target);
+            while (p.firstChild == null && p.parentNode.tagName != 'body') {
+                let cur = p;
+                p = p.parentNode;
+                p.removeChild(cur);
+            }
+            xButton.target = p.firstChild;
         });
         return this.xButton = xButton;
     }

@@ -1,4 +1,10 @@
-The following does not work because of github's CORS restrictions. Please go to https://github.com/tsalufe/real-editor/blob/master/real-editor.js and copy the code before dropping it directly on your browser.
+The following does not work because of github's CORS restrictions. Please go to https://raw.githubusercontent.com/tsalufe/real-editor/master/real-editor.js and copy the code before dropping it directly on your browser's console and hit enter.
+
+To stop it, please drop the following code on your browser's console and hit enter,
+```
+window.RealEditorInst.destroy();
+```
+
 
 Add the following script tag to your html file,
 
